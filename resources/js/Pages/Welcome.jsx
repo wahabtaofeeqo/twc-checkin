@@ -6,22 +6,14 @@ export default function Welcome({ models }) {
 
     const [query, setQuery] = useState();
 
-    // const 
-    // // const handleImageError = () => {
-    // //     document.getElementById('screenshot-container')?.classList.add('!hidden');
-    // //     document.getElementById('docs-card')?.classList.add('!row-span-1');
-    // //     document.getElementById('docs-card-content')?.classList.add('!flex-row');
-    // //     document.getElementById('background')?.classList.add('!hidden');
-    // // };
-
     useEffect(() => {
         if(query) {
-             router.get('/', {search: query},
-                 {
-                    preserveState: true,
-                    replace: true,
-                 }
-             );
+            router.get('/', {search: query},
+                {
+                preserveState: true,
+                replace: true,
+                }
+            );
         }
      }, [query])
 
@@ -34,11 +26,11 @@ export default function Welcome({ models }) {
                     className="absolute -left-20 top-0 max-w-[677px]"
                     src="https://laravel.com/assets/img/welcome/background.svg"
                 />
-                <div className="relative min-h-screen flex flex-col items-center justify-center py-5 selection:bg-[#FF2D20] selection:text-white">
+                <div className="relative min-h-screen flex justify-center py-5 selection:bg-[#FF2D20] selection:text-white">
                     
                     <div className="relative w-full max-w-2xl px-6 lg:max-w-7xl">
                         <div className="mb-4 flex gap-3 items-center justify-between">
-                            <input className='rounded block' placeholder='Search...' type="text" onChange={(e) => setQuery(e.target.value)} />
+                            <input className='rounded block w-2/5 text-gray-700' placeholder='Search...' type="text" onChange={(e) => setQuery(e.target.value)} />
                             <Link href='/validated' className='py-2 px-3 bg-sky-500 rounded'>Validated List</Link>
                         </div>
 

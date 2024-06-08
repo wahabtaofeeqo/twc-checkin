@@ -9,11 +9,11 @@ const PageLink = ({ active, label, url }) => {
       'px-4 py-3',
       'border border-solid border-gray-300 rounded',
       'text-sm',
-      'hover:bg-white',
+      'hover:bg-white hover:text-gray-500',
       'focus:outline-none focus:border-indigo-700 focus:text-indigo-700'
     ],
     {
-      'bg-white': active
+      'bg-white text-black': active,
     }
   );
   return (
